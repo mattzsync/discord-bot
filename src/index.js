@@ -12,5 +12,10 @@ const client = new Client({
 	],
 });
 
+// listen when our bot is ready
+client.on('ready', (c) => {
+	console.log(`${c.user.tag} is online.`);
+});
+
 // Use the token from .env
 client.login(process.env.DISCORD_BOT_TOKEN);
