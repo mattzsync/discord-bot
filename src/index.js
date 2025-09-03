@@ -17,5 +17,10 @@ client.on('ready', (c) => {
 	console.log(`${c.user.tag} is online.`);
 });
 
+// need the intents to read menssages
+client.on('messageCreate', (msg) => {
+	console.log(msg);
+});
+
 // Use the token from .env
 client.login(process.env.DISCORD_BOT_TOKEN);
