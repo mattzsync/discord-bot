@@ -1,2 +1,2 @@
 # discord-bot
-Criando um bot em javascript para o discord
+Creating a js bot for discord
