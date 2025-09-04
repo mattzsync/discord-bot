@@ -12,14 +12,21 @@ const client = new Client({
 	],
 });
 
-// listen when our bot is ready
+// logging messages
 client.on('ready', (c) => {
 	console.log(`${c.user.tag} is online.`);
 });
 
 // need the intents to read menssages
+// ping to the bot
 client.on('messageCreate', (msg) => {
-	console.log(msg);
+	// Doesnt reply himself
+	if (msg.author.bot) {
+		return;
+	}
+	if (msg.content === 'ping') {
+		msg.reply('Pong!');
+	}
 });
 
 // Use the token from .env
